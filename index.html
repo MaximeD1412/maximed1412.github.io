@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>MaximeD1412 — Projets &amp; portfolio</title>
-  <meta name="description" content="Découvrez les projets de MaximeD1412 : Crewdeck, Personal OS et un site communal. Des outils pour piloter des projets et organiser le quotidien.">
+  <meta name="description" content="Découvrez les projets de MaximeD1412 : Crewdeck, Console, Personal OS et un site communal. Des outils pour piloter des projets et organiser le quotidien.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="MaximeD1412 — Projets & portfolio">
-  <meta property="og:description" content="Des idées aux outils du quotidien. Découvrez Crewdeck, Personal OS et un site communal.">
+  <meta property="og:description" content="Des idées aux outils du quotidien. Découvrez Crewdeck, son premier pilote Console, Personal OS et un site communal.">
   <meta name="theme-color" content="#0d1117">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1117'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='monospace' font-size='36' font-weight='bold' fill='%2367e8d2'%3EM%3C/text%3E%3C/svg%3E">
   <style>
@@ -48,6 +48,7 @@
     .project.featured .project-visual.screenshot{display:flex;flex-direction:column;justify-content:center;min-height:0}
     .project-links{display:flex;gap:1rem;flex-wrap:wrap;margin-top:auto}.project-links .source{margin:0}
     @media(max-width:600px){.project-visual.screenshot{padding:.75rem}.project.featured .project-visual.screenshot{min-height:0}}
+    .console-project{grid-column:1/-1}.console-project .project-body>p:not(.category),.console-project details{max-width:80ch}.console-project .project-body{border-left:3px solid var(--accent)}.console-project .repo-status{color:var(--muted);font:.875rem/1.5 ui-monospace,Consolas,monospace}
   </style>
 </head>
 <body>
@@ -80,7 +81,7 @@
       </div>
     </section>
     <section class="wrap section" id="projets" aria-labelledby="projets-titre">
-      <div class="section-heading"><div><p class="eyebrow">Une sélection de projets</p><h2 id="projets-titre">Trois besoins.<br>Trois terrains de jeu.</h2></div><p>Pour chaque projet, une intention et du code à explorer.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">Une sélection de projets</p><h2 id="projets-titre">Quatre projets.<br>Des usages concrets.</h2></div><p>Des premières expérimentations aux applications, un aperçu de mon travail.</p></div>
       <div class="projects">
         <article class="project featured">
           <figure class="project-visual crew screenshot">
@@ -100,11 +101,24 @@
           </figure>
           <div class="project-body"><p class="category">Information locale · Gestion de contenu</p><h3>Site communal</h3><p>Un socle de site pour une petite commune : actualités, agenda, documents publics et associations, avec un back-office pour administrer les contenus.</p><ul class="tags" aria-label="Technologies du dépôt site communal"><li>Next.js</li><li>Payload CMS</li><li>PostgreSQL</li></ul><details><summary>Explorer le projet</summary><p>Le projet rassemble des pages configurables, un annuaire associatif et une intégration PanneauPocket. L’environnement de déploiement s’appuie sur Docker Compose et Caddy.</p></details><div class="project-links"><a class="source" href="https://mairie-test.51-38-39-18.sslip.io/" target="_blank" rel="noopener" aria-label="Consulter le site de test de la mairie dans un nouvel onglet">Voir le site de test</a><a class="source" href="https://github.com/MaximeD1412/site-mairie-vac">Voir le dépôt</a></div></div>
         </article>
+        <article class="project featured console-project">
+          <figure class="project-visual screenshot">
+            <a class="screenshot-link" href="./assets/console-pilotage.svg" target="_blank" rel="noopener" aria-label="Ouvrir la capture de Console en grand dans un nouvel onglet"><img src="./assets/console-pilotage.svg" width="1897" height="1027" loading="lazy" decoding="async" alt="Console, premier pilote de Crewdeck : vue Pilotage avec tickets, graphe des chaînes de blocage et panneau de suivi d’une session d’agent."></a>
+          </figure>
+          <div class="project-body">
+            <p class="category">Prototype · Pilotage d’agents IA</p>
+            <h3>Console</h3>
+            <p>Le premier pilote de Crewdeck : une console web pour suivre les boucles d’agents, retrouver les décisions en attente et piloter mes projets depuis un ordinateur ou un téléphone.</p>
+            <ul class="tags" aria-label="Technologies du projet Console"><li>React</li><li>TypeScript</li><li>Hono</li></ul>
+            <details><summary>Explorer le projet</summary><p>La console rassemble le suivi des boucles, les revues de code, le planning, les statistiques et les versions. Cette première expérimentation de pilotage a précédé Crewdeck.</p></details>
+            <span class="repo-status">Code dans un dépôt privé</span>
+          </div>
+        </article>
       </div>
     </section>
     <section class="wrap section about" id="apropos" aria-labelledby="apropos-titre">
       <div><p class="eyebrow">À propos</p><h2 id="apropos-titre">Un fil conducteur :<br>l’utilité.</h2></div>
-      <div class="about-copy"><p>Derrière ces projets, un même sujet : donner une place claire à l’information et aux actions, qu’il s’agisse de projets de développement, du quotidien ou de la vie d’une commune.</p><p>Ce portfolio rassemble une sélection de mes dépôts publics. Le code et la documentation permettent d’en découvrir les choix techniques et les fonctionnalités.</p><ul class="areas"><li><strong>Applications web</strong><span>Interfaces, API et contenus administrables.</span></li><li><strong>Outils d’organisation</strong><span>Projets, quotidien et information locale.</span></li><li><strong>Agents IA</strong><span>Le pilotage de projets exploré avec Crewdeck.</span></li></ul></div>
+      <div class="about-copy"><p>Derrière ces projets, un même sujet : donner une place claire à l’information et aux actions, qu’il s’agisse de projets de développement, du quotidien ou de la vie d’une commune.</p><p>Ce portfolio rassemble une sélection de mes projets, dont plusieurs sont disponibles sur GitHub. Pour les projets publics, le code et la documentation permettent d’en découvrir les choix techniques et les fonctionnalités.</p><ul class="areas"><li><strong>Applications web</strong><span>Interfaces, API et contenus administrables.</span></li><li><strong>Outils d’organisation</strong><span>Projets, quotidien et information locale.</span></li><li><strong>Agents IA</strong><span>De la première console de pilotage à Crewdeck.</span></li></ul></div>
     </section>
     <section class="wrap contact" id="contact" aria-labelledby="contact-titre"><div><p class="eyebrow">Gardons le contact</p><h2 id="contact-titre">Un projet t’intéresse ?</h2><p>Retrouve-moi sur GitHub pour explorer le code, suivre les projets ou ouvrir une discussion dans les issues d’un dépôt.</p></div><a class="button" href="https://github.com/MaximeD1412">Retrouver mon profil GitHub</a></section>
   </main>
